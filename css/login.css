@@ -1,0 +1,446 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins',sans-serif;
+}
+
+header {
+    height: auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+header.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-animation: anime 0.4s ease;
+    animation: anime 0.4s ease;
+}
+
+@-webkit-keyframes anime {
+    0% {
+        -webkit-transform: translateY(-10rem);
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes anime {
+    0% {
+        -webkit-transform: translateY(-10rem);
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: var(--color-light-1);
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid var(--color-light-gray);
+    z-index: 99999;
+}
+
+nav .logo {
+    margin-left: 4rem;
+}
+
+nav .logo a {
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li {
+    margin-right: 2rem;
+}
+
+.menu-items li a {
+    color: var(--color-dark-3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: var(--color-red-2);
+}
+
+.search-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.2rem;
+    width: 24rem;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.search-box .search-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 15%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: var(--color-primary);
+    border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.search-box .search-icon span {
+    color: var(--color-light-1);
+    font-size: 1.2rem;
+}
+
+.search-box input {
+    padding-left: 0.8rem;
+    height: 100%;
+    width: 80%;
+    color: var(--color-dark-3);
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: var(--color-light-3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0 0.1rem 0.1rem 0;
+}
+
+.search-box input::-webkit-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::-moz-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input:-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+}
+
+nav .icon-links {
+    margin-right: 2.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.icon-links div {
+    position: relative;
+    margin-right: 1.6rem;
+}
+
+.icon-links div span {
+    color: var(--color-dark-3);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.icon-links #search-btn {
+    display: none;
+}
+
+.icon-links div #item-counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0.9rem, -0.8rem);
+    -ms-transform: translate(0.9rem, -0.8rem);
+    transform: translate(0.9rem, -0.8rem);
+    display: none;
+    height: 1.3rem;
+    width: 1.3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: var(--color-light-1);
+    font-size: 0.8rem;
+    background: var(--color-red-1);
+    border-radius: 50%;
+}
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menuCSS3 a {
+    display: block;
+    padding: 2em;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+}
+.menuCSS3 a:hover {
+    background-color: #CC673B;
+}
+.menuCSS3 ul li ul {
+    display: none;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: block;
+}
+   /* efecto al pasar el ratón por los items del menu */
+
+
+.icon-links div #item-counter.active-item-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#toggle-bar {
+    position: relative;
+    height: 1.6rem;
+    width: 1.4rem;
+    display: none;
+}
+
+#toggle-bar .toggler {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar .toggler::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: -8px;
+    left: 0;
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar .toggler::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: 8px;
+    left: 0;
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar.active-toggler .toggler {
+    background: transparent;
+}
+
+#toggle-bar.active-toggler .toggler::before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#toggle-bar.active-toggler .toggler::after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+section{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #4444;
+    background: url(../img/imagen2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.form-box{
+     position: relative;
+     width: 400px;
+     height: 450px;
+     
+     border: 2px solid rgba(255,255,255,0.5);
+     border-radius: 20px;
+     backdrop-filter:blur(15px);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+h2{
+	font-size: 2em;
+	font-family: 'Righteous', cursive;
+	text-align: center;
+}	
+
+.inputbox{
+	position: relative;
+	width: 310px;
+	margin: 30px 0;
+	border-bottom: 2px solid #ffff;
+}
+
+.inputbox label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: white;
+	pointer-events: none;
+	transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+ top: -5px;
+}
+
+
+.inputbox input{
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border:none;
+	outline: none;
+	font-size: 1em;
+	padding: 0 35px 0 5px;
+	color: white;
+}
+
+.inputbox ion-icon{
+	position: absolute;
+	right: 8px;
+	color: white;
+	font-size: 1.2em;
+	top: 20px;
+}
+
+.forget{
+	margin: -15px 0 15px;
+	font-size: .9em;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.forget label input{
+	margin-right: 3px;
+}
+
+.forget a{
+	color: white;
+	text-decoration: none;
+}
+
+.forget label a:hover{
+	text-decoration: underline;
+}
+
+button{
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	background: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.register{
+	font-size: .9em;
+	color: #fff;
+	text-align: center;
+	margin: 25px 0 10px;
+}
+
+.register p a{
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+}
+
+.register p a:hover{
+  text-decoration: underline;
+}
+
+label{
+	font-family: 'Karla', sans-serif;
+
+}

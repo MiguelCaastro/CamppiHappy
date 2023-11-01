@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image:url(../veg.jpg);
+}
+.container-box{
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border-radius:10px;
+    background-color:rgba(240, 255, 255, 0.653);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+.container-box2{
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border-radius:10px;
+    background-color:rgba(240, 255, 255, 0.653);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    left: 700px;
+    bottom: 350px;
+}
+.container-box3{
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border-radius:10px;
+    background-color:rgba(240, 255, 255, 0.653);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    bottom: 300px;
+    left: 50px;
+
+}
+.container-box4{
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border-radius:10px;
+    background-color:rgba(240, 255, 255, 0.653);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    left: 700px;
+    bottom: 745px;
+}
+input{
+    width: 100%;
+}
+span :hover{
+    background-color:aqua;
+    width: 50%;
+    
+}

@@ -1,0 +1,522 @@
+body{
+    background-color:black;
+}
+:root {
+    --color-primary: #316131;
+    --color-secondary: #459122;
+    --color-green-1: green;
+
+    --color-red-1: red;
+    --color-red-2: orangered;
+
+    --color-light-1: #fff;
+    --color-light-2: #eff;
+    --color-light-3: #eee;
+    --color-light-4: #ddd;
+    --color-light-5: #ccc;
+
+    --color-light-green: #cefccc;
+    --color-light-gray: silver;
+
+    --color-gray-1: #999;
+    --color-gray-2: gray;
+
+    --color-dark-1: #111;
+    --color-dark-2: #222;
+    --color-dark-3: #333;
+    --color-dark-4: #444;
+    --color-dark-5: #555;
+
+    --purple-dark-1: #211e25;
+    --purple-dark-2: #343236;
+
+    --color-dark-blue: #2e2e3f;
+}
+header {
+    height: auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+header.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-animation: anime 0.4s ease;
+    animation: anime 0.4s ease;
+}
+
+@-webkit-keyframes anime {
+    0% {
+        -webkit-transform: translateY(-10rem);
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes anime {
+    0% {
+        -webkit-transform: translateY(-10rem);
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: var(--color-light-1);
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid var(--color-light-gray);
+    z-index: 99999;
+}
+
+nav .logo {
+    margin-left: 4rem;
+}
+
+nav .logo a {
+    color: green;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li {
+    margin-right: 2rem;
+}
+
+.menu-items li a {
+    color: var(--color-dark-3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: 10px;
+    position: relative;
+}
+
+.menu-items li a:hover {
+    color: rgb(176, 132, 30);
+}
+
+.search-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.2rem;
+    width: 24rem;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.search-box .search-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 15%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.search-box .search-icon span {
+    color: var(--color-light-1);
+    font-size: 1.2rem;
+}
+
+.search-box input {
+    padding-left: 0.8rem;
+    height: 100%;
+    width: 80%;
+    color: var(--color-dark-3);
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: var(--color-light-3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0 0.1rem 0.1rem 0;
+}
+
+.search-box input::-webkit-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::-moz-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input:-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+}
+
+nav .icon-links {
+    margin-right: 2.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.icon-links div {
+    position: relative;
+    margin-right: 1.6rem;
+}
+
+.icon-links div span {
+    color: var(--color-dark-3);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.icon-links #search-btn {
+    display: none;
+}
+
+.icon-links div #item-counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0.9rem, -0.8rem);
+    -ms-transform: translate(0.9rem, -0.8rem);
+    transform: translate(0.9rem, -0.8rem);
+    display: none;
+    height: 1.3rem;
+    width: 1.3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: var(--color-light-1);
+    font-size: 0.8rem;
+    background: var(--color-red-1);
+    border-radius: 50%;
+}
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menuCSS3 a {
+    display: block;
+    padding: 2em;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+}
+.menuCSS3 a:hover {
+    background-color: #CC673B;
+}
+.menuCSS3 ul li ul {
+    display: none;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: block;
+}
+   /* efecto al pasar el ratón por los items del menu */
+
+
+.icon-links div #item-counter.active-item-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#toggle-bar {
+    position: relative;
+    height: 1.6rem;
+    width: 1.4rem;
+    display: none;
+}
+
+#toggle-bar .toggler {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar .toggler::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: -8px;
+    left: 0;
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar .toggler::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    top: 8px;
+    left: 0;
+    background: #2e2e3f;
+    border-radius: 0.2rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#toggle-bar.active-toggler .toggler {
+    background: transparent;
+}
+
+#toggle-bar.active-toggler .toggler::before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#toggle-bar.active-toggler .toggler::after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.logo1{
+    width: 10px;
+    position: relative;
+    left: -450px;
+}
+img{
+    width: 60px;
+}
+.section-footer {
+    background: var(--purple-dark-1);
+    height: 40vh;
+}
+
+.footer-wrap {
+    margin-top: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer-wrap>div {
+    -ms-flex-preferred-size: 320px;
+    flex-basis: 320px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.footer-wrap>.footer-menu,
+.footer-wrap>.top-products-links,
+.footer-wrap>.useful-links {
+    -ms-flex-preferred-size: 190px;
+    flex-basis: 190px;
+}
+
+.footer-wrap>div>h2 {
+    padding-bottom: 0.4rem;
+    position: relative;
+    color: var(--color-light-1);
+    font-size: 1.4rem;
+}
+
+.footer-wrap>div>h2::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 0.2rem;
+    width: 3.8rem;
+    background: var(--color-gray-2);
+    border-radius: 0.1rem;
+}
+
+.footer-wrap>div>div>p {
+    padding-top: 0.6rem;
+    color: var(--color-light-1);
+    font-size: 1.1rem;
+}
+
+.footer-wrap>div>div {
+    padding-top: 0.2rem;
+}
+
+.footer-wrap>div>div>p>a {
+    color: var(--color-light-1);
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.footer-wrap>div>div>p>a:hover {
+    color: orange;
+}
+
+.master-cards .payment-cards {
+    margin-top: 0.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.payment-cards .payment-link {
+    margin: 0.6rem 1rem 0 0;
+}
+
+.payment-cards .payment-link a {
+    text-decoration: none;
+
+}
+
+.payment-link a span {
+    color: var(--color-light-1);
+    font-size: 3rem;
+}
+
+.social-media-links {
+    margin-top: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.social-media-links .f-links {
+    margin-right: 0.8rem;
+}
+
+.social-media-links .f-links a {
+    text-decoration: none;
+}
+
+.social-media-links .f-links a span {
+    color: var(--color-light-1);
+    font-size: 1.2rem;
+}
+
+/* =============================
+    footer navigation area end
+=============================== */
+
+
+
+/* ========================
+    copyright area start
+========================== */
+
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: var(--purple-dark-1);
+    border-top: 1px solid var(--color-dark-5);
+}
+
+footer p {
+    color: var(--color-light-1);
+    font-size: 1.2rem;
+}
+
+footer p a {
+    color: #9fcf3d;
+    text-decoration: none;
+}
+.logi1{
+    position: relative;
+    bottom: 15px;
+
+}
+.logi2{
+    position: relative;
+    bottom: 0px;
+
+}
+
+/* ======================
+    copyright area end
+======================== */
+
+/* ===================
+    Footer Area End
+===================== */
