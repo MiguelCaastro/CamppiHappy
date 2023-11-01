@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseas vender?</title>
+   <link rel="stylesheet" href="css/bender.css">
+ 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Lobster&display=swap');
+    </style>
+    <style>
+            /* fonts */
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+            /* icons */
+            @import url('./icon.css');
+    </style>
+        
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">CAMPI<span>HAPPY</span></a>
+        </div>
+        <div class="logo1">
+        <img src="img/imagen5.png" alt="">
+        </div>
+
+        <ul class="menu-items">
+         <li><a href="#top"> Inicio </a></li>
+            <li><a href="#about"> Sobre </a></li>
+            <li><a href="#services"> Servicios </a></li>
+            <li><a href="#products"> Productos </a></li>
+            <li><a href="#contact"> Contacto </a></li>
+        </ul>
+
+        <!--<div class="search-box">
+            <div class="search-icon">
+                <span class="icon-search"></span>
+            </div>
+            <input type="text" placeholder="Search...">
+        </div>-->
+
+        <div class="icon-links">
+            <!--<div id="search-btn"><span class="icon-search"></span></div>-->
+            <div id="customer-center"><span class="icon-phone-alt"></span></div>
+            <div id=""> <a href="login.html"> <span class="icon-user"></a></div>
+            <div id="toggle-bar"><span class="toggler"></span></div>
+        </div>
+    </nav>
+</header>
+    <section>
+        <div class="form-box" >
+           <form action="registrar_roles.php" method="post">
+             <center><h2 class="letra" >¿DESEAS VENDER?</h2></center>
+              <div class="inputbox">
+                <ion-icon name="person-outline"></ion-icon>
+                <label for=""> Ingrese el nombre del producto</label>
+                <input type="text" name="nombre">
+                
+              </div>
+               <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label for=""> Ingrese el valor que usted crea aceptable</label>
+                <input type="text" name="usuario">
+                <br><br>
+              </div>
+             
+            
+                <select name="tipo" class="tipo">
+                    <option value="">-seleccione el tipo de producto </option>
+                    <option value="admin">frutas y verduras</option>
+                    <option value="user">Carnes</option>
+                    <option value="user">Ganado</option>
+                    <option value="user">Granos</option>
+                </select>
+              <br><br>
+              <div class="redes">
+                <label for="">Ingresa tus redes sociales</label>
+                <br><br>
+                
+                <img src="img/inst2.png" alt="" class="img7"><input type="text" class="in1">
+               
+                <br>
+                <img src="img/whats3.png" alt="" class="img4"><input type="text" class="in2">
+               
+                <br>
+                <img src="img/face.png" alt="" class="img5"> <input type="text" class="in3">
+               
+                
+                </div>
+                <div class="container-box">
+                    
+                   <label for="">Subir Archivos</label>
+                   <br><br>
+                    <form action="insertar_imagenes.php" method="post" enctype="multipart/form-data">
+                        
+                        <label for=""> Nombre </label>
+                        <input type="text" class="inputname" name="nombre" required="">
+                        <br><br>
+                        <label for=""> Archivo</label>
+                        <input type="file" class="inputname" name="archivo">
+                        <br>
+                       <input class="boten" type="submit" value="Subir" name="subir">
+                       <br><br>
+                        <center><button class="bur1"> <a href="listar_imagenes.php"> DESCARGAS </a> </button></center>
+                    </form>
+                </div>
+                 
+                <br><br>
+                <button class="bur"><a href="registrar_roles.php">Registrar tu producto</a></button>
+            </section>
+
+</body>
+</html>

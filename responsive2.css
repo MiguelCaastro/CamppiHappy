@@ -1,0 +1,44 @@
+/* Estilos responsivos para tamaños de pantalla pequeños (menos de 768px) */
+@media (max-width: 768px) {
+    /* Ajusta los estilos de la cabecera para tamaños de pantalla pequeños */
+    header {
+        height: auto;
+    }
+
+body{
+    background-repeat: repeat-y;
+}
+
+    .btn{
+        position: relative;
+        left: 270px;
+    }
+
+    nav .logo {
+        margin-left: 1rem; /* Ajusta el margen izquierdo del logotipo */
+    }
+
+    nav .menu-items {
+        display: none; /* Oculta los elementos del menú */
+    }
+
+    nav .search-box {
+        display: block; /* Muestra la caja de búsqueda */
+    }
+
+    /* Ajusta el margen de la caja de búsqueda */
+    .search-box {
+        margin-right: 1rem;
+    }
+
+    /* Ajusta el tamaño de fuente de los elementos del menú */
+    .menu-items li a {
+        font-size: 1rem;
+    }
+
+    /* Ajusta el tamaño de fuente de los íconos de la barra de navegación */
+    .icon-links div span {
+        font-size: 1rem;
+    }
+
+}

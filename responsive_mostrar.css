@@ -1,0 +1,129 @@
+/* Cambios en la fuente */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Contenedor principal */
+.section-wrap {
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Títulos */
+.section-title h1 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/* Barra de navegación */
+nav {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-light-1);
+    border-bottom: 1px solid var(--color-light-gray);
+    position: relative;
+    align-items: center;
+}
+
+/* Logo */
+nav .logo {
+    margin: 0 1rem;
+}
+
+nav .logo a {
+    font-size: 1.8rem;
+}
+
+/* Menú */
+nav .menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li {
+    margin: 0 1rem;
+}
+
+.menu-items li a {
+    font-size: 1rem;
+}
+
+/* Caja de búsqueda */
+.search-box {
+    display: flex;
+    max-width: 24rem;
+    transition: all 0.4s ease;
+}
+
+.search-box .search-icon {
+    width: 15%;
+}
+
+.search-box input {
+    width: 85%;
+}
+
+/* Enlaces de iconos */
+.icon-links div {
+    margin-right: 1rem;
+}
+
+.icon-links div span {
+    font-size: 1.2rem;
+}
+
+/* Barra de menú desplegable */
+.menuCSS3 ul {
+    display: none;
+}
+
+/* Botón de menú desplegable */
+#toggle-bar {
+    display: block;
+    cursor: pointer;
+}
+
+#toggle-bar .toggler {
+    background: #2e2e3f;
+}
+
+#toggle-bar .toggler::before,
+#toggle-bar .toggler::after {
+    top: 0;
+    width: 100%;
+    background: #2e2e3f;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .section-wrap {
+        padding: 1rem;
+    }
+
+    nav .menu-items {
+        display: none;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    #toggle-bar.active-toggler ~ .menu-items {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background: var(--color-light-1);
+        width: 100%;
+        text-align: center;
+    }
+
+    #toggle-bar.active-toggler ~ .menu-items li {
+        margin: 1rem 0;
+    }
+}
+
+/* Tu CSS para el formulario, tabla y botones permanece igual */
